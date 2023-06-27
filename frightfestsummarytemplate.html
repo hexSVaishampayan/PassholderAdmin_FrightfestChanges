@@ -1,0 +1,116 @@
+﻿<style>
+    .visitors, .stats { font-size:10pt;}
+    h4 {
+        margin-bottom: 6px;
+        margin-top: 17px;
+        font-size: 11pt;
+        color: #666666;
+    }
+    .stats td,
+    .visitors td {
+        text-align: right;
+        height: 20px;
+        vertical-align: middle;
+        padding-right:5px;
+        width:65px;
+        border-bottom:1px dotted #888888;
+    }
+    .visitors td.rowdesc, .visitors th.rowdesc {
+        text-align:left;
+        width:160px;
+    }
+    .stats {
+        border-top: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+    }
+    .stats .tot,
+    .visitors .tot {
+        border-top:1px solid #000000;
+        border-bottom:none!important;
+        font-weight:bold;
+    }
+    .stats .metricdesc {
+        text-align: left;
+        width: 250px !important;
+    }
+    .stats .metricvalue {width:65px; text-align:right;}
+
+    table.wrapper {
+        width: 828px;
+    }
+    table.wrapper >td {
+        vertical-align:top;
+    }
+    .housecount {
+        width:758px;
+    }
+</style>
+<h4>Summary Statistics</h4>
+<table class="wrapper">
+    <tr><td>
+
+    <br />
+    <table class="stats">
+        <tr><td class="metricdesc">Total House Visits:</td><td class="metricvalue">{{housevisits}}</td></tr>
+        <tr><td class="metricdesc">Unique Visitors:</td><td class="metricvalue">{{uniquevisits}}</td></tr>
+        <tr><td class="metricdesc">2nd+ House Visits:</td><td class="metricvalue">{{dupevisits}}</td></tr>
+        <tr><td class="metricdesc">Avg Houses Per Guest:</td><td class="metricvalue">{{avgvisits}}</td></tr>
+        <tr><td class="metricdesc">Avg <u>Unique</u> Houses Visited:</td><td class="metricvalue">{{avguniquevisits}}</td></tr>
+        <tr><td class="metricdesc">Only visited each house once:</td><td class="metricvalue">{{vis1only}}</td></tr>
+        <tr><td class="metricdesc">Visited at least 1 house twice:</td><td class="metricvalue">{{vis2plus}}</td></tr>
+    </table>
+
+</td><td>
+
+    <table class="visitors">
+        <tr><th class="rowdesc">User Type</th><th>Guests</th><th>Houses</th><th>Avg</th></tr>
+        <tr><td class="rowdesc">Diamond Elite</td><td>{{deguests}}</td><td>{{devisits}}</td><td>{{deavg}}</td></tr>
+        <tr><td class="rowdesc">Diamond</td><td>{{diguests}}</td><td>{{divisits}}</td><td>{{diavg}}</td></tr>
+        <tr><td class="rowdesc">Season Wristbands</td><td>{{seaswguests}}</td><td>{{seaswvisits}}</td><td>{{seaswavg}}</td></tr>
+        <tr><td class="rowdesc">Daily Wristbands</td><td>{{daywguests}}</td><td>{{daywvisits}}</td><td>{{daywavg}}</td></tr>
+        <tr class="tot"><td class="rowdesc tot">Total</td><td class="tot">{{guests}}</td><td class="tot">{{uniquevisits}}</td><td class="tot">{{avguniquevisits}}</td></tr>
+    </table>
+
+</td>
+</tr>
+</table>
+<br />
+<h4>Guests By How Many Houses They Visited</h4>
+<table class="stats housecount">
+    <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
+        <th>11</th>
+        <th>12</th>
+        <th>13</th>
+        <th>14</th>
+        <th>15</th>
+    </tr>
+    <tr>
+    <td>{{hvisits01}}</td>
+    <td>{{hvisits02}}</td>
+    <td>{{hvisits03}}</td>
+    <td>{{hvisits04}}</td>
+    <td>{{hvisits05}}</td>
+    <td>{{hvisits06}}</td>
+    <td>{{hvisits07}}</td>
+    <td>{{hvisits08}}</td>
+    <td>{{hvisits09}}</td>
+    <td>{{hvisits10}}</td>
+    <td>{{hvisits11}}</td>
+    <td>{{hvisits12}}</td>
+    <td>{{hvisits13}}</td>
+    <td>{{hvisits14}}</td>
+    <td>{{hvisits15}}</td>
+</tr>
+</table>
+<br />
+ 

@@ -1,0 +1,83 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="NewAdmin.Master.vb" Inherits="PassholderAdmin.NewAdmin" %>
+<%@ register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="viewport" content="initial-scale=.90, maximum-scale=.90" />
+    <link type="text/css" rel="stylesheet" href="https://mypass.sixflags.com/styles/corporate.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="https://mypass.sixflags.com/styles/dialog.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="adminstyle.css" media="all" />
+    <style>
+        html, body {
+    background: #f9f9f9!important;
+}
+        div#pnlErrors {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+        div#pnlErrors {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -50px;
+}
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <telerik:radscriptmanager ID="RadScriptManager1" runat="server">
+		<Scripts>
+			<asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />
+			<asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js" />
+			<asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js" />
+		</Scripts>
+	</telerik:radscriptmanager>
+    <telerik:radajaxmanager ID="RadAjaxManager1" runat="server">
+	</telerik:radajaxmanager>
+        <div class="displayPage">
+	        <div class="header">
+                
+            </div>
+            <div style="display:block;">
+                </div>
+            <asp:Panel ID="pnlErrors" runat="server" Visible="false" >
+                <telerik:RadLabel ID="lblErrors" runat="server"></telerik:RadLabel>
+            </asp:Panel>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:Literal ID="lblUserStatus" runat="server"></asp:Literal>
+        </div>
+    <telerik:RadWindowManager ID="RadWindowManager1" runat="server"></telerik:RadWindowManager>
+
+        <script>
+                (function (global, undefined) {
+            var demo = {};
+
+            function alertCallBackFn(arg) {
+            }
+
+            Sys.Application.add_load(function () {
+                //attach a handler to radio buttons to update global variable holding image url
+                $telerik.$('input:radio').bind('click', function () {
+                    demo.imgUrl = $telerik.$(this).val();
+                });
+            });
+
+            global.alertCallBackFn = alertCallBackFn;
+            global.$dialogsDemo = demo;
+        })(window);
+
+
+    </script>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,683 @@
+﻿body {
+    margin-top: 45px;
+    font-family: sans-serif;
+}
+
+div#ctl00_mnuMain {
+    display: inline-block;
+    margin-left: 21px;
+    margin-top:5px;
+    top: 0px;
+    left: 0px;
+}
+
+.RadMenu li.rmItem {
+    margin-bottom: 0px;
+}
+
+.RadMenu .rmHorizontal .rmItem span.rmText {
+    text-shadow: none;
+}
+
+div#ctl00_mnuMain.RadMenu_Bootstrap .rmRootLink {
+    padding: 6px;
+    color: white;
+    background: none;
+    border: none;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+div#ctl00_mnuMain.RadMenu_Bootstrap .rmRootGroup {
+    background: none;
+    border: none;
+}
+
+table.headerSpace td {
+    vertical-align: middle;
+    padding-left: 11px;
+}
+
+.header {
+    background: #203c6d;
+    padding: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    margin: -8px;
+    font-size: 16pt;
+    text-shadow: 1px 1px 8px #000;
+    padding-left: 11px;
+    box-shadow: 0px -2px 8px 4px #000;
+    position: fixed;
+    width: 100%;
+    top: 9px;
+    padding-bottom:0px;
+    padding-top:0px;
+}
+
+.actionButton {
+    font-size: 14pt;
+    padding: 9px;
+    border: none;
+    background: #4393f7;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 12px;
+    box-shadow: 0px 1px 6px -2px #000;
+    cursor: pointer;
+}
+
+    .actionButton.diningButton {
+        background: brown;
+    }
+
+    .actionButton:hover {
+        box-shadow: 0px 2px 9px -2px #000;
+    }
+
+    .actionButton.cancelButton {
+        background: #c1c1c1;
+    }
+
+    .actionButton.navigation {
+        background: #000000;
+    }
+
+    .actionButton:active {
+        box-shadow: 0px 0px 1px 0px #000;
+    }
+
+    .actionButton.buyButton {
+        background-color: #13a013;
+        display: block;
+        margin: 0px;
+        font-size: 11pt;
+        padding: 9px;
+        margin-left: 13px;
+        margin-right: 14px;
+        margin-bottom: 3px;
+        padding-bottom: 11px;
+        padding-top: 10px;
+    }
+
+.greenblock,
+.yellowblock,
+.redblock {
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    background-color: #99ff99;
+    margin-right: 7px;
+    border: 1px solid #d6d6d6;
+    vertical-align: bottom;
+}
+
+p.buttonRow {
+    margin-top: 16px;
+}
+
+div.buttonRow {
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.revImg {
+    display: inline-block;
+    padding-right: 8px;
+    width: 77px;
+}
+
+.revLeft {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 5px;
+    overflow-x: hidden;
+    width: 288px;
+}
+
+.revRight {
+    display: inline-block;
+    width: 89px;
+    vertical-align: top;
+    padding-top: 0px;
+    padding-left: 6px;
+    text-align: center;
+    position:relative;
+}
+
+img.imgIcon {
+    height: 75px;
+}
+
+span.revGuest {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.rlbItem ,
+.rlbItem.rlbActive {
+    border-bottom:1px solid #ddd;
+}
+
+.revPrice {
+    font-size:16pt;
+}
+
+.revStatus {
+
+}
+
+span.passActive {
+    color: green;
+    font-weight: bold;
+    font-size: 11pt;
+    text-transform: uppercase;
+    background: green;
+    color: white;
+    padding: 4px;
+    padding-left: 5px;
+    padding-right: 6px;
+}
+
+
+
+.RadListBox.RadListBox_Bootstrap {
+    width: 495px;
+    margin-top: 5px;
+}
+
+
+
+.revName {
+    font-size: 9pt;
+}
+
+.revSub1 {
+    font-size:9pt;
+}
+
+.revSub2 {
+    font-size: 9pt;
+}
+
+.orderSection {
+    width:1000px;
+}
+.orderBlock {
+    vertical-align:top;
+}
+
+.rlbHeader {
+    background: #777777;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+span.passActive2 {
+    color: green;
+    font-style: italic;
+}
+
+span.passActive2 {
+    color: green;
+    font-style: italic;
+}
+
+.passVoid2 {
+    color:red;
+    font-style:italic;
+}
+
+.revStatus {
+    margin-bottom: -4px;
+    font-size: 10pt;
+}
+
+span.passActive {
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #008000a3;
+    color: white;
+    padding-left: 6px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    min-width: 102px;
+    border-radius: 14px;
+    font-size: 12px;
+}
+
+
+span.passVoid {
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #ea0000a3;
+    color: white;
+    padding-left: 6px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    min-width: 102px;
+    border-radius: 14px;
+    font-size: 12px;
+}
+
+
+table.requestInfoTable {
+    border-collapse: collapse;
+    width: 95%;
+}
+
+    table.requestInfoTable td {
+        border-bottom: 1px solid #ddd;
+        padding-top: 4px;
+        padding-bottom: 2px;
+    }
+
+    table .requestInfoTable td {
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+        padding-top: 4px;
+        padding-bottom: 2px;
+        vertical-align: middle;
+    }
+
+
+    table.requestInfoTable.xCompare {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 6px;
+        max-width: 495px;
+    }
+
+
+
+.revStatus {
+    margin-bottom: -1px;
+    font-size: 10pt;
+    margin-top: 20px;
+}
+
+span.orderidno {
+    font-weight: bold;
+    font-size: 24pt;
+}
+
+html, body {
+    background: #f9f9f9;
+}
+
+.instructionblock {
+    margin-top: 16px;
+}
+
+.rlbDisabled {
+    background: #ff000029;
+}
+
+li {
+    max-width: 100%!important;
+}
+
+div#pnlErrors {
+    background: #fff0c1;
+    max-width: none;
+    width:100%;
+}
+
+
+.ErrorTextDIV {
+    width: 981px !important;
+    margin-left: 14px !important;
+    margin-right: 38px !Important;
+}
+
+.groupSettingsRow {
+    background: black;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 15pt;
+    color: white;
+    margin-top: -6px;
+    padding-left: 13px;
+}
+
+.groupSettingsRow select#ContentPlaceHolder1_fldMemberUpgradeRequestStatusID {
+    margin-left: 11px;
+}
+
+.sendmsgbutton {
+    font-size: 15pt;
+}
+
+.sendmsgbutton2 {
+    font-size: 11pt;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 13px;
+    vertical-align: 2px;
+}
+
+.changestatusdropdown {
+    font-size: 14pt;
+    padding-top: 6px;
+    padding-bottom: 10px;
+    min-width: 220px;
+    vertical-align: 2px;
+    margin-left: 0px;
+    padding-left: 4px;
+}
+
+div.buttonRow2 {
+    margin-top: -5px;
+    margin-bottom: 25px;
+}
+
+table.msgtemplaterow {
+    margin-bottom: 7px;
+    width: 1045px;
+}
+
+div#ContentPlaceHolder1_pnlSendMessage {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 1050px;
+    box-shadow: 0px 0px 10px -3px;
+    background: white;
+    padding-bottom: 0;
+}
+
+p.refundrow {
+    font-size: 14pt;
+    color: red;
+}
+
+span.refundamount {
+    font-size: 20pt;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+td.monthlypayment {
+    color: blue;
+    font-weight: bold;
+}
+
+td.dayssincelast {
+    color: #8700ff;
+    font-weight: bold;
+}
+
+.navControls {
+    display: inline-block;
+    background: #d2d2d2;
+    padding: 7px;
+    padding-left: 18px;
+    padding-bottom: 9px;
+    margin-left: 15px;
+    border-radius: 20px;
+}
+
+td.refundDesc {
+    width: 150px;
+    font-size: 13pt;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.refundButton {
+    margin-right: 8px;
+    margin-top: 5px;
+    font-size: 11pt;
+    background: #a52424;
+    color: white;
+    border: none;
+    padding: 5px;
+}
+
+.refundButton:hover {
+
+}   
+ p .refundguidance {
+    font-size: 10pt;
+    margin-top: 12px;
+    font-style: italic;
+    color: #888888;
+}
+
+.refundBox {
+    margin-right: 10px;
+    width: 97px;
+    text-align: right;
+    font-size: 17pt !important;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.refundButton:hover {
+    background: #d63131;
+    box-shadow: 0px 2px 6px 0px #777;
+}
+
+.refundButton:active {
+    background: #671717;
+    box-shadow: 0px 0px 2px 0px #777;
+}
+
+#ContentPlaceHolder1_pnlRefundInfo,
+#ContentPlaceHolder1_pnlPromoInfo {
+    border: 1px solid #ddd;
+    margin-top: 13px;
+    padding: 9px;
+    box-shadow: 0px 0px 7px -2px #666;
+    background: #ffe4e4;
+    width: 475px;
+}
+
+#ContentPlaceHolder1_pnlRefundInfo h2,
+#ContentPlaceHolder1_pnlPromoInfo h2 {
+    margin-top: 2px;
+    background: red;
+    padding: 5px;
+    color: white;
+    margin: -9px;
+    margin-bottom: 16px;
+}
+
+p.refundguidance {
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 10pt;
+    color: red;
+}
+
+td.newprocessingfee {
+    color: red;
+    font-weight: bold;
+}
+
+.requestClearBlock {
+    height: 345px;
+    background-color: #eee;
+    display: block;
+    width: 492px;
+    border: 1px dotted #ccc;
+    margin-bottom: 5px;
+}
+
+#ctl00_ContentPlaceHolder1_lstOldPasses .revItem {
+    padding-bottom: 6px;
+}
+
+p.promoinst {
+    width: 100%;
+    max-width: 100%;
+    font-size: 10pt;
+}
+
+.requestBlockMessage {
+    width: 100%;
+    height: 345px;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+    width: 493px;
+    font-style: italic;
+    color: #717070;
+}
+
+.disbleGrantButton {
+    background-color: #e0e0e0 !important;
+    color: #868686;
+    font-style: italic;
+    box-shadow: none !important;
+}
+
+#ContentPlaceHolder1_cmdPromoSaveEdit.aspNetDisabled {
+    background: #b9b9b9;
+    color: #000000c2;
+    padding: 4px;
+    padding-left: 9px;
+    font-style: italic;
+    font-size: 10pt;
+    padding: 9px;
+    padding-top: 8px;
+    margin-top: 2px;
+    padding-right: 12px;
+}
+
+#ContentPlaceHolder1_cmdPromoSaveEdit.aspNetDisabled:hover {
+    box-shadow: none;
+}
+
+.promoButton {
+    margin-right: 8px;
+    margin-top: 5px;
+    font-size: 11pt;
+    background: #009428;
+    color: white;
+    border: none;
+    padding: 9px;
+    margin-top: 1px;
+    padding-left: 13px;
+    padding-right: 17px;
+    font-weight: bold;
+}
+
+.promoButton:hover {
+    background: #3f9614;
+    box-shadow: 0px 2px 6px 0px #777;
+}
+
+.RadAjaxPanel {
+    min-height: 100%;
+    height: 100%;
+    display: inline-block !important;
+}
+
+#ContentPlaceHolder1_pnlForm {
+    padding: 20px;
+    padding-top: 0px;
+    margin-top: 25px;
+}
+
+.cmdAction {
+    background: #2196f3;
+    color: white;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-shadow: 0px 2px 5px -3px #000000;
+    border: none;
+    margin-top: 12px;
+    font-size: 11pt;
+}
+
+
+    .cmdAction:hover {
+        background: #0055d8;
+    }
+
+    .cmdAction:active {
+        background: #000000;
+        box-shadow:none;
+    }
+
+input#ContentPlaceHolder1_cmdRemoveSelected {
+    border: 0px;
+    padding: 5px;
+    margin-top: 5px;
+    box-shadow: 0px 0px 2px 0px #000;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+div#ContentPlaceHolder1_pnlAssignConfirm,
+div#ContentPlaceHolder1_pnlAccountsSP {
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 22px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 21px -7px;
+    background: #f9f9f9;
+}
+
+#ContentPlaceHolder1_lblConfirmText {
+    padding: 20px;
+    display: block;
+    padding-bottom: 0px;
+    font-size: 14pt;
+    line-height: 30px;
+}
+
+.miniTable {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.majorTable {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.majorCol4 {
+    color:black;
+    font-weight:bold;
+}
+
+h1 {
+    font-size: 22pt;
+    padding-top: 6px;
+    display: block;
+    width: 100%;
+    background: #cccccc;
+    color: black;
+    padding-bottom: 8px;
+    padding-left: 13px;
+}
+
+.fieldHeader {
+    margin-bottom: 1px !important;
+    margin-top: 20px;
+    color: #444;
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    padding-left: 1px;
+    display: block;
+    text-align: left;
+    padding-bottom: 4px;
+}

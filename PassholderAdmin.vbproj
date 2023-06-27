@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{CBBCC788-0DA5-4F98-9BF5-E60AF94643AC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PassholderAdmin</RootNamespace>
+    <AssemblyName>PassholderAdmin</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>PassholderAdmin.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>PassholderAdmin.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChilkatDotNet47, Version=9.5.0.89, Culture=neutral, PublicKeyToken=eb5fc1fc52ef09bd">
+    </Reference>
+    <Reference Include="GemBox.Spreadsheet, Version=41.3.30.1183, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
+      <HintPath>packages\GemBox.Spreadsheet.41.3.30.1183\lib\net30\GemBox.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Membership">
+      <HintPath>..\Membership\Membership\bin\Membership.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.Design, Version=2021.3.1111.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\RCAJAX\2021.3.1111.45\Telerik.Web.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.Spreadsheet, Version=2021.3.1111.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\RCAJAX\2021.3.1111.45\AdditionalLibraries\Bin45\Telerik.Web.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2021.3.1111.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\RCAJAX\2021.3.1111.45\Telerik.Web.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2021.3.1111.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\RCAJAX\2021.3.1111.45\Telerik.Web.UI.Skins.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>lib\RCAJAX\2021.3.1111.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>lib\RCAJAX\2021.3.1111.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>lib\RCAJAX\2021.3.1111.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>lib\RCAJAX\2021.3.1111.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>lib\RCAJAX\2021.3.1111.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="AppAccessLibrary" />
+    <Import Include="BenefitsLibrary" />
+    <Import Include="FactaLibrary" />
+    <Import Include="FreshdeskLibrary2020" />
+    <Import Include="GreenArrowLibrary" />
+    <Import Include="LoyaltyLibrary" />
+    <Import Include="MarketingAnalysisLibrary" />
+    <Import Include="Membership" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="PanelLibrary" />
+    <Import Include="PassholderLibrary" />
+    <Import Include="SalesforceLibrary" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.Sql" />
+    <Import Include="System.Data.SqlClient" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+    <Import Include="Telerik.Web.UI" />
+    <Import Include="Telerik.Web.UI.TreeView.Renderers" />
+    <Import Include="TMTixLibrary" />
+    <Import Include="Utilities" />
+    <Import Include="Utilities.Constants" />
+    <Import Include="Utilities.GeneralPurpose" />
+    <Import Include="Utilities.Helpers" />
+    <Import Include="Utilities.Logging" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="adminstyle.css" />
+    <Content Include="atses.aspx" />
+    <Content Include="ats.aspx" />
+    <Content Include="atsadmin.aspx" />
+    <Content Include="atsreport.aspx" />
+    <Content Include="CouponsByFolio.aspx" />
+    <Content Include="CouponsByMediaNumber.aspx" />
+    <Content Include="couponTools.aspx" />
+    <Content Include="frightfestdailysummary.sql" />
+    <Content Include="default.aspx" />
+    <Content Include="foliolookup.aspx" />
+    <Content Include="forceupgrade.aspx" />
+    <Content Include="freshdeskimport.aspx" />
+    <Content Include="facta.aspx" />
+    <Content Include="FrightFest.aspx" />
+    <Content Include="frightfestlookup.sql" />
+    <Content Include="frightfestsummarytemplate.html" />
+    <Content Include="Global.asax" />
+    <Content Include="ImportTMTix.aspx" />
+    <Content Include="inparksales.aspx" />
+    <Content Include="localdev.aspx" />
+    <Content Include="lookuporder.aspx" />
+    <Content Include="lookuppass.aspx" />
+    <Content Include="managereservations.aspx" />
+    <Content Include="MemberTest.aspx" />
+    <Content Include="MessageReservedGuests.aspx" />
+    <Content Include="giftcardlookup.aspx" />
+    <Content Include="pause.aspx" />
+    <Content Include="premierlookup.aspx" />
+    <Content Include="refund.aspx" />
+    <Content Include="reports\onlinesales.aspx" />
+    <Content Include="reservationreport.aspx" />
+    <Content Include="retrieveidentity.aspx" />
+    <Content Include="rewardsban.aspx" />
+    <Content Include="shredcoupon.aspx" />
+    <Content Include="agentupdate.aspx" />
+    <Content Include="tmticket.aspx" />
+    <Content Include="token.aspx" />
+    <Content Include="triage.aspx" />
+    <Content Include="upgradereview.aspx" />
+    <Content Include="upgradereviewitem.aspx" />
+    <Content Include="ValidateEmails.aspx" />
+    <Content Include="validatepassno.aspx" />
+    <Content Include="weatherforecast.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NewAdmin.Master.designer.vb">
+      <DependentUpon>NewAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NewAdmin.Master.vb">
+      <DependentUpon>NewAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.vb">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.Master.vb">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="atses.aspx.designer.vb">
+      <DependentUpon>atses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="atses.aspx.vb">
+      <DependentUpon>atses.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ats.aspx.designer.vb">
+      <DependentUpon>ats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ats.aspx.vb">
+      <DependentUpon>ats.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="atsadmin.aspx.designer.vb">
+      <DependentUpon>atsadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="atsadmin.aspx.vb">
+      <DependentUpon>atsadmin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="atsreport.aspx.designer.vb">
+      <DependentUpon>atsreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="atsreport.aspx.vb">
+      <DependentUpon>atsreport.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CouponsByFolio.aspx.designer.vb">
+      <DependentUpon>CouponsByFolio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CouponsByFolio.aspx.vb">
+      <DependentUpon>CouponsByFolio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CouponsByMediaNumber.aspx.designer.vb">
+      <DependentUpon>CouponsByMediaNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CouponsByMediaNumber.aspx.vb">
+      <DependentUpon>CouponsByMediaNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="couponTools.aspx.designer.vb">
+      <DependentUpon>couponTools.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="couponTools.aspx.vb">
+      <DependentUpon>couponTools.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FFHouseClass.vb" />
+    <Compile Include="foliolookup.aspx.designer.vb">
+      <DependentUpon>foliolookup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="foliolookup.aspx.vb">
+      <DependentUpon>foliolookup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forceupgrade.aspx.designer.vb">
+      <DependentUpon>forceupgrade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forceupgrade.aspx.vb">
+      <DependentUpon>forceupgrade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="freshdeskimport.aspx.designer.vb">
+      <DependentUpon>freshdeskimport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="freshdeskimport.aspx.vb">
+      <DependentUpon>freshdeskimport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="facta.aspx.designer.vb">
+      <DependentUpon>facta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="facta.aspx.vb">
+      <DependentUpon>facta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FrightFest.aspx.designer.vb">
+      <DependentUpon>FrightFest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrightFest.aspx.vb">
+      <DependentUpon>FrightFest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frightfestwristbandsummary.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ImportTMTix.aspx.designer.vb">
+      <DependentUpon>ImportTMTix.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportTMTix.aspx.vb">
+      <DependentUpon>ImportTMTix.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="inparksales.aspx.designer.vb">
+      <DependentUpon>inparksales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inparksales.aspx.vb">
+      <DependentUpon>inparksales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="localdev.aspx.designer.vb">
+      <DependentUpon>localdev.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="localdev.aspx.vb">
+      <DependentUpon>localdev.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lookuporder.aspx.designer.vb">
+      <DependentUpon>lookuporder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lookuporder.aspx.vb">
+      <DependentUpon>lookuporder.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="lookuppass.aspx.designer.vb">
+      <DependentUpon>lookuppass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lookuppass.aspx.vb">
+      <DependentUpon>lookuppass.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="managereservations.aspx.designer.vb">
+      <DependentUpon>managereservations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="managereservations.aspx.vb">
+      <DependentUpon>managereservations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberTest.aspx.designer.vb">
+      <DependentUpon>MemberTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberTest.aspx.vb">
+      <DependentUpon>MemberTest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MessageReservedGuests.aspx.designer.vb">
+      <DependentUpon>MessageReservedGuests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MessageReservedGuests.aspx.vb">
+      <DependentUpon>MessageReservedGuests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="giftcardlookup.aspx.designer.vb">
+      <DependentUpon>giftcardlookup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="giftcardlookup.aspx.vb">
+      <DependentUpon>giftcardlookup.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="pause.aspx.designer.vb">
+      <DependentUpon>pause.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pause.aspx.vb">
+      <DependentUpon>pause.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="premierlookup.aspx.designer.vb">
+      <DependentUpon>premierlookup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="premierlookup.aspx.vb">
+      <DependentUpon>premierlookup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="radhelpers.vb" />
+    <Compile Include="refund.aspx.designer.vb">
+      <DependentUpon>refund.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="refund.aspx.vb">
+      <DependentUpon>refund.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="reports\onlinesales.aspx.designer.vb">
+      <DependentUpon>onlinesales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reports\onlinesales.aspx.vb">
+      <DependentUpon>onlinesales.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="reservationreport.aspx.designer.vb">
+      <DependentUpon>reservationreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reservationreport.aspx.vb">
+      <DependentUpon>reservationreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="retrieveidentity.aspx.designer.vb">
+      <DependentUpon>retrieveidentity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="retrieveidentity.aspx.vb">
+      <DependentUpon>retrieveidentity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rewardsban.aspx.designer.vb">
+      <DependentUpon>rewardsban.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rewardsban.aspx.vb">
+      <DependentUpon>rewardsban.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="shredcoupon.aspx.designer.vb">
+      <DependentUpon>shredcoupon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="shredcoupon.aspx.vb">
+      <DependentUpon>shredcoupon.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="agentupdate.aspx.designer.vb">
+      <DependentUpon>agentupdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="agentupdate.aspx.vb">
+      <DependentUpon>agentupdate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="tmticket.aspx.designer.vb">
+      <DependentUpon>tmticket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tmticket.aspx.vb">
+      <DependentUpon>tmticket.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="token.aspx.designer.vb">
+      <DependentUpon>token.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="token.aspx.vb">
+      <DependentUpon>token.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="triage.aspx.designer.vb">
+      <DependentUpon>triage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="triage.aspx.vb">
+      <DependentUpon>triage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="upgradereview.aspx.designer.vb">
+      <DependentUpon>upgradereview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="upgradereview.aspx.vb">
+      <DependentUpon>upgradereview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="upgradereviewitem.aspx.designer.vb">
+      <DependentUpon>upgradereviewitem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="upgradereviewitem.aspx.vb">
+      <DependentUpon>upgradereviewitem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValidateEmails.aspx.designer.vb">
+      <DependentUpon>ValidateEmails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateEmails.aspx.vb">
+      <DependentUpon>ValidateEmails.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="validatepassno.aspx.designer.vb">
+      <DependentUpon>validatepassno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="validatepassno.aspx.vb">
+      <DependentUpon>validatepassno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="weatherforecast.aspx.designer.vb">
+      <DependentUpon>weatherforecast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="weatherforecast.aspx.vb">
+      <DependentUpon>weatherforecast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.Master" />
+    <Content Include="NewAdmin.Master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\Feedback %28Home%29.pubxml" />
+    <None Include="My Project\PublishProfiles\Feedback %28Work%29.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppAccessLibrary\AppAccessLibrary\AppAccessLibrary.vbproj">
+      <Project>{f163f2f2-6182-4d25-8734-06990fafbf3c}</Project>
+      <Name>AppAccessLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BenefitsLibrary\BenefitsLibrary.vbproj">
+      <Project>{1865d1d1-4199-4950-878f-a362db5730a6}</Project>
+      <Name>BenefitsLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FactaLibrary\FactaLibrary.vbproj">
+      <Project>{a0379011-df0d-4c2d-8ef3-0b7f5dd6551b}</Project>
+      <Name>FactaLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FreshdeskLibrary2020\FreshdeskLibrary2020.vbproj">
+      <Project>{797701da-39b1-48cb-baef-0333d02c7e20}</Project>
+      <Name>FreshdeskLibrary2020</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GluuLibrary\GluuLibrary.vbproj">
+      <Project>{adae6f6f-d799-4b39-9887-54bc5eb5866b}</Project>
+      <Name>GluuLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GreenArrowLibrary\GreenArrowLibrary.vbproj">
+      <Project>{edcfa8e2-4b35-4b4e-bf40-c7181f1f3550}</Project>
+      <Name>GreenArrowLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GuestActivityLibrary\GuestActivityLibrary.vbproj">
+      <Project>{b56a70b6-1203-4870-ac21-a17a6f1651f5}</Project>
+      <Name>GuestActivityLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LoyaltyLibrary\LoyaltyLibrary.vbproj">
+      <Project>{f7636d87-8ff1-45ec-ae96-e41afaee649e}</Project>
+      <Name>LoyaltyLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MarketingAnalysisLibrary\MarketingAnalysisLibrary.vbproj">
+      <Project>{e56e5835-b32f-4671-b0f7-9b3878f429aa}</Project>
+      <Name>MarketingAnalysisLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MembershipLibrary\MembershipLibrary.vbproj">
+      <Project>{d09f268b-bdc3-48c5-9c10-fc01ddaa6db8}</Project>
+      <Name>MembershipLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PanelLibrary\PanelLibrary\PanelLibrary.vbproj">
+      <Project>{1979fcda-b66b-4a7c-99b5-c9f5087b6135}</Project>
+      <Name>PanelLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PassholderLibrary\PassholderLibrary.vbproj">
+      <Project>{e8c3ce93-5e92-4fb3-a133-04adb5253b47}</Project>
+      <Name>PassholderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SalesforceLibrary\SalesforceLibrary.vbproj">
+      <Project>{bd6faa4c-b9e7-4c0b-84cb-83888f6d42cd}</Project>
+      <Name>SalesforceLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SixFlagsAPIs\SixFlagsAPIs.vbproj">
+      <Project>{822a6481-275f-4eaf-b99d-d2d2dbce649d}</Project>
+      <Name>SixFlagsAPIs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TMTixLibrary\TMTixLibrary.vbproj">
+      <Project>{f2c30310-e445-431a-abb7-d3dfbe3e3864}</Project>
+      <Name>TMTixLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.vbproj">
+      <Project>{507dc284-e58e-48cf-b3e4-c234860caf5e}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeatherLibrary\WeatherLibrary.vbproj">
+      <Project>{718f1e85-6806-4a50-8c71-ceafe4c955c2}</Project>
+      <Name>WeatherLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>frightfestdailysummary.sql</ApplicationManifest>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63323</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63323/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

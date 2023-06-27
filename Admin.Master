@@ -1,0 +1,131 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Admin.master.vb" Inherits="PassholderAdmin.Admin" %>
+<%@ register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="viewport" content="initial-scale=.90, maximum-scale=.90" />
+    <link type="text/css" rel="stylesheet" href="https://mypass.sixflags.com/styles/corporate.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="https://mypass.sixflags.com/styles/dialog.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="adminstyle.css" media="all" />
+    <style>
+        html, body {
+    background: #f9f9f9!important;
+}
+        div#pnlErrors {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+        div#pnlErrors {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -50px;
+}
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <telerik:radscriptmanager ID="RadScriptManager1" runat="server">
+		<Scripts>
+			<asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />
+			<asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js" />
+			<asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js" />
+		</Scripts>
+	</telerik:radscriptmanager>
+    <telerik:radajaxmanager ID="RadAjaxManager1" runat="server">
+	</telerik:radajaxmanager>
+        <div class="displayPage">
+	        <div class="header">
+                <table class="headerSpace">
+                    <tr>
+                        <td><asp:Label ID="lblTitle" runat="server" Text="Pass Holder Support"></asp:Label></td>
+                        <td>
+                            <telerik:RadMenu ID="mnuMain" runat="server">
+                                <Items>
+                                    <telerik:RadMenuItem runat="server" Text="Member Support">
+                                        <Items>
+                                            <telerik:RadMenuItem runat="server" Text="Review Upgrades" NavigateUrl="upgradereview.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Reservation Report" NavigateUrl="reservationreport.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Shred Coupon" NavigateUrl="shredcoupon.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Ban from Member Rewards" NavigateUrl="rewardsban.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Lookup Pause Status" NavigateUrl="pause.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Lookup Media Usage" NavigateUrl="lookuppass.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Lookup Order Info" NavigateUrl="lookuporder.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Lookup COVID Months" NavigateUrl="giftcardlookup.aspx"></telerik:RadMenuItem>
+                                        </Items>
+                                    </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem runat="server" Text="Admin">
+                                        <Items>
+                                            <telerik:RadMenuItem runat="server" Text="Import Freshdesk" NavigateUrl="freshdeskimport.aspx"></telerik:RadMenuItem>
+                                        </Items>
+                                    </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem runat="server" Text="Research">
+                                        <Items>
+                                            <telerik:RadMenuItem runat="server" Text="ATS Coupons" NavigateUrl="ats.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="ATS Report" NavigateUrl="atsreport.aspx"></telerik:RadMenuItem>
+                                        </Items>
+                                    </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem runat="server" Text="Promotions">
+                                        <Items>
+                                            <telerik:RadMenuItem runat="server" Text="Change Member Test Offer" NavigateUrl="MemberTest.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="FACTA Settlement Vouchers" NavigateUrl="facta.aspx"></telerik:RadMenuItem>
+                                        </Items>
+                                    </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem runat="server" Text="Reports">
+                                        <Items>
+                                            <telerik:RadMenuItem runat="server" Text="In-Park Sales Report" NavigateUrl="inparksales.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Weather Forecast" NavigateUrl="/trackingreports/weatherforecast.aspx?pc=ERYTpnsyFv9h%25rT4d3kT"></telerik:RadMenuItem>
+                                        </Items>
+                                    </telerik:RadMenuItem>
+                                    
+                                    
+                                </Items>
+                            </telerik:RadMenu>
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+            <div style="display:block;">
+                </div>
+            <asp:Panel ID="pnlErrors" runat="server" Visible="false" >
+                <telerik:RadLabel ID="lblErrors" runat="server"></telerik:RadLabel>
+            </asp:Panel>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:Literal ID="lblUserStatus" runat="server"></asp:Literal>
+        </div>
+    <telerik:RadWindowManager ID="RadWindowManager1" runat="server"></telerik:RadWindowManager>
+
+        <script>
+                (function (global, undefined) {
+            var demo = {};
+
+            function alertCallBackFn(arg) {
+            }
+
+            Sys.Application.add_load(function () {
+                //attach a handler to radio buttons to update global variable holding image url
+                $telerik.$('input:radio').bind('click', function () {
+                    demo.imgUrl = $telerik.$(this).val();
+                });
+            });
+
+            global.alertCallBackFn = alertCallBackFn;
+            global.$dialogsDemo = demo;
+        })(window);
+
+
+    </script>
+
+    </form>
+</body>
+</html>
